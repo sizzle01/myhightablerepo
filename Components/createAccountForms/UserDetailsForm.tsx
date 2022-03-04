@@ -2,14 +2,8 @@ import Buttons from '../Buttons'
 import TextField from '../TextField'
 import { Box, FormLabel, Text } from '@chakra-ui/react'
 import { useFormik } from 'formik'
-import React, { useState } from 'react'
 
 const UserDetailsForm = () => {
-  // const [email, setEmail] = useState('')
-  // const handleChange = (e=> {
-  //   setEmail(e.currentTarget.value)
-  //   console.log(email)
-  // }
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -35,6 +29,9 @@ const UserDetailsForm = () => {
               placeholder="Enter email address"
               id="email"
               type="email"
+              name="email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
             />
           </Box>
           <Box display="flex" justifyContent="space-between" mt="60px">
@@ -50,8 +47,11 @@ const UserDetailsForm = () => {
               <TextField
                 height="55px"
                 placeholder="Enter First name"
-                id="FirstName"
                 type="text"
+                id="firstName"
+                name="firstName"
+                value={formik.values.firstName}
+                onChange={formik.handleChange}
               />
             </Box>
             <Box w="46%">
@@ -68,6 +68,8 @@ const UserDetailsForm = () => {
                 name="lastName"
                 id="lastName"
                 type="text"
+                value={formik.values.lastName}
+                onChange={formik.handleChange}
               />
             </Box>
           </Box>
