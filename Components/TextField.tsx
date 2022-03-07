@@ -21,10 +21,16 @@ import React, { useState } from 'react'
 // : React.FC<TextFieldProps>
 // }
 
-const TextField = ({ label, id, name, onChange, value }) => {
-  // const [value, setValue] = React.useState('')
-  // const handleChange = (event) => setValue(event.target.value)
-  // console.log(value)
+const TextField = ({
+  label,
+  id,
+  children,
+  name,
+  onChange,
+  value,
+  placeholder,
+  type,
+}) => {
   return (
     <div>
       <FormControl>
@@ -38,11 +44,20 @@ const TextField = ({ label, id, name, onChange, value }) => {
         </FormLabel>
         <InputGroup>
           <Input
+            bg="fieldBg"
             height="55px"
             id={id}
+            placeholder={placeholder}
             focusBorderColor="brand.100"
             onChange={onChange}
             value={value}
+            type={type}
+          />
+          <InputRightElement
+            // children={
+            //   <CheckIcon color="white" bg="brand.100" borderRadius="50%" />
+            // }
+            children={children}
           />
         </InputGroup>
       </FormControl>

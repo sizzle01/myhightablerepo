@@ -3,7 +3,7 @@ import { Button, ButtonGroup } from '@chakra-ui/react'
 interface ButtonsProps {
   description: String
   color: string
-  width: string
+  width: any
   background: string
   borderRadius: string
   height: string
