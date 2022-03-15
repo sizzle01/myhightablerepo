@@ -46,11 +46,12 @@ const Confirmation = () => {
               fontFamily="Montserrat"
               fontWeight="500"
               fontSize="14px"
-              color="#666670"
+              color="black.100"
             >
               Enter the Special Code
             </FormLabel>
             <TextField
+              h="55px"
               type="text"
               id="confirmation"
               name="confirmation"

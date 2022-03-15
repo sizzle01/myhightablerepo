@@ -11,17 +11,18 @@ import {
 } from '@chakra-ui/react'
 import React, { useState } from 'react'
 
-// interface TextFieldProps {
-//   height: string
-//   placeholder: string
-//   label: string
-//   id: string
-//   type: string
-// { label, height, onChange }
-// : React.FC<TextFieldProps>
-// }
+interface TextFieldProps {
+  height: string
+  placeholder: string
+  label: string
+  id: string
+  type: string
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  children: any
+  h: string
+}
 
-const TextField = ({
+const TextField: React.FC<TextFieldProps> = ({
   label,
   id,
   children,
@@ -30,6 +31,7 @@ const TextField = ({
   value,
   placeholder,
   type,
+  h,
 }) => {
   return (
     <div>
@@ -45,8 +47,8 @@ const TextField = ({
         <InputGroup>
           <Input
             bg="fieldBg"
-            height="55px"
             id={id}
+            h={h}
             placeholder={placeholder}
             focusBorderColor="brand.100"
             onChange={onChange}

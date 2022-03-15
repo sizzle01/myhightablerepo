@@ -10,6 +10,9 @@ interface ButtonsProps {
   fontSize: string
   onClick: MouseEventHandler
   type: string
+  leftIcon: React.ReactElement
+  colorScheme: string
+  border: string
 }
 const Buttons: React.FC<ButtonsProps> = ({
   description,
@@ -19,19 +22,26 @@ const Buttons: React.FC<ButtonsProps> = ({
   fontSize,
   onClick,
   type,
+  leftIcon,
+  colorScheme,
+  border,
+  color,
 }) => {
   return (
     <Button
       style={{
-        color: '#ffffff',
+        color,
         width,
         background,
         borderRadius: '10px',
         height,
         fontSize,
+        border,
       }}
+      colorScheme={colorScheme}
       type={type}
       onClick={onClick}
+      leftIcon={leftIcon}
     >
       {description}
     </Button>

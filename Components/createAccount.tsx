@@ -3,12 +3,16 @@ import { customTheme } from '../styles/Theme'
 import Logo from '../images/brandlogo.png'
 import Buttons from '../Components/Buttons'
 import TextField from '../Components/TextField'
+import ProgressBar from './createAccountForms/ProgressBar'
 interface CreateAccountProps {
   form: any
   actionType: string
   actionDescription: string
   enterDetails: string
   basicDetails: string
+  loginButton: any
+  businessName: string
+  progressBar: any
 }
 const CreateAccount: React.FC<CreateAccountProps> = ({
   form,
@@ -16,6 +20,9 @@ const CreateAccount: React.FC<CreateAccountProps> = ({
   actionDescription,
   enterDetails,
   basicDetails,
+  loginButton,
+  businessName,
+  progressBar,
 }) => {
   return (
     <Box>
@@ -86,7 +93,7 @@ const CreateAccount: React.FC<CreateAccountProps> = ({
               <Box
                 fontWeight="400"
                 lineHeight="162%"
-                mt={['20px', '40px', '129px', '98px']}
+                mt={['20px', '40px', '129px', '120px']}
                 fontFamily="Montserrat"
                 fontSize={['18px', '18px', '20', '22px']}
                 width={['87%', '80%', '100%', '70%']}
@@ -104,6 +111,7 @@ const CreateAccount: React.FC<CreateAccountProps> = ({
             </Heading>
           </Box>
         </Box>
+        {/* Right half of the page */}
         <Box width={['100%', '100%', '65%', '65%']} bg="#ffffff">
           <Box
             display="flex"
@@ -124,14 +132,16 @@ const CreateAccount: React.FC<CreateAccountProps> = ({
               mt={['10%', '3%', '10%', '10%']}
               ml={['0%', '0%', '6%', '6%']}
               mr={['52%', '40%', '0%', '0%']}
-              width={['65%', '50%', '30%', '30%']}
+              width={['65%', '90%', '80%', '100%']}
             >
-              <Box ml={['20%', '0%', '6%', '6%']}>
+              <Box ml={['20%', '20%', '0%', '0%']}>
+                <Box>{progressBar}</Box>
+
                 <Text
                   fontFamily="montserrat"
                   fontWeight="500"
                   fontSize="18px"
-                  color="#000000"
+                  color="black.100"
                 >
                   {enterDetails}
                 </Text>
@@ -139,7 +149,7 @@ const CreateAccount: React.FC<CreateAccountProps> = ({
                   fontFamily="montserrat"
                   fontWeight="400"
                   fontSize="14px"
-                  color="#666670"
+                  color="black.90"
                 >
                   {basicDetails}
                 </Text>
@@ -150,13 +160,7 @@ const CreateAccount: React.FC<CreateAccountProps> = ({
               mt="10%"
               mr={['0%', '0%', '7%', '7%']}
             >
-              <Buttons
-                description="Go to Login"
-                background="#666670"
-                width="100%"
-                height="55px"
-                fontSize="14px"
-              />
+              {loginButton}
             </Box>
           </Box>
           <Box

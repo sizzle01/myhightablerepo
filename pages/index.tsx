@@ -27,17 +27,6 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <div>
-          <Box>
-            <TextField
-              value={value}
-              onChange={handleChange}
-              placeholder="Here is a sample placeholder"
-              size="sm"
-            />
-          </Box>
-        </div>
-
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>

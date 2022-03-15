@@ -58,6 +58,7 @@ const UserDetailsForm = () => {
                 </FormLabel>
 
                 <TextField
+                  h="55px"
                   placeholder="Enter email address"
                   id="email"
                   type="email"

@@ -37,11 +37,10 @@ const BusinessDetailForm = () => {
       ),
     }),
     onSubmit: (values) => {
-      console.log(formk.values)
+      console.log(formik.values)
     },
   })
-  console.log(formik.values)
-  console.log(formik.errors)
+  console.log(formik.initialValues.businessName)
   return (
     <div>
       <form onSubmit={formik.handleSubmit}>
@@ -77,15 +76,15 @@ const BusinessDetailForm = () => {
             </FormLabel>
 
             <TextField
-              height="55px"
+              h="55px"
               type="email"
               name="email"
               id="email"
-              children={
-                formik.values.email.length < 1 && formik.errors.email ? null : (
-                  <CheckIcon color="white" bg="brand.100" borderRadius="50%" />
-                )
-              }
+              // children={
+              //   formik.values.email.length < 1 && formik.errors.email ? null : (
+              //     <CheckIcon color="white" bg="brand.100" borderRadius="50%" />
+              //   )
+              // }
               onChange={formik.handleChange}
               value={formik.values.email}
               onBlur={formik.handleBlur}
@@ -95,7 +94,7 @@ const BusinessDetailForm = () => {
               <p style={{ color: 'red' }}>{formik.errors.email}</p>
             ) : null}
           </Box>
-          <Box mt="20px" width={['94%', '90%', '100%', '100%']}>
+          <Box mt="20px" mb="20px" width={['94%', '90%', '100%', '100%']}>
             <FormLabel
               fontFamily="Montserrat"
               fontWeight="500"
@@ -105,7 +104,7 @@ const BusinessDetailForm = () => {
               Business Name
             </FormLabel>
             <TextField
-              height="55px"
+              h="55px"
               type="text"
               name="businessName"
               id="businessName"
@@ -128,7 +127,7 @@ const BusinessDetailForm = () => {
             }}
             alignItems="center"
             justifyContent="space-between"
-            mt={['33px', '20px', '35px', '30px']}
+            w={['100%', '100%', '100%', '100%']}
             width="100%"
           >
             <Box width={['94%', '90%', '100%', '47%']}>
@@ -141,9 +140,9 @@ const BusinessDetailForm = () => {
                 Your Password
               </FormLabel>
               <TextField
+                h="55px"
                 type="password"
                 width="330px"
-                height="55px"
                 id="password"
                 name="password"
                 onChange={formik.handleChange}
@@ -156,7 +155,7 @@ const BusinessDetailForm = () => {
             </Box>
             <Box
               width={['94%', '90%', '100%', '47%']}
-              mt={['33px', '20px', '35px', '30px']}
+              mt={['33px', '20px', '35px', '0px']}
             >
               <FormLabel
                 fontFamily="Montserrat"
@@ -167,6 +166,7 @@ const BusinessDetailForm = () => {
                 Confirm password
               </FormLabel>
               <TextField
+                h="55px"
                 type="password"
                 width="330px"
                 height="55px"
