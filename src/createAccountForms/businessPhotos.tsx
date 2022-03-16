@@ -1,7 +1,7 @@
 import { Box, Image, Input, Stack, Text } from '@chakra-ui/react'
 import ProgressBar from './progressBar'
 import { useState } from 'react'
-import Buttons from './components/buttons'
+import Buttons from '../components/buttons'
 import React from 'react'
 
 const BusinessPhotos = () => {

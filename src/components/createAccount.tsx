@@ -3,7 +3,7 @@ import { Box, color, Container, Image, Heading, Text } from '@chakra-ui/react'
 import Logo from '../images/brandlogo.png'
 import Buttons from './buttons'
 import TextField from './textField'
-import ProgressBar from '../progressBar'
+import ProgressBar from '../createAccountForms/progressBar'
 interface CreateAccountProps {
   form?: any
   actionType: string

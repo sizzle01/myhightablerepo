@@ -1,5 +1,5 @@
-import Buttons from '../createAccountForms/components/buttons'
-import CreateAccount from '../createAccountForms/components/createAccount'
+import Buttons from '../components/buttons'
+import CreateAccount from '../components/createAccount'
 import BusinessDetailForm from '../createAccountForms/businessDetailForm'
 const BusinessDetails = () => {
   return (

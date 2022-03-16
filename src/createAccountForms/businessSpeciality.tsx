@@ -3,7 +3,7 @@ import React from 'react'
 import ProgressBar from './progressBar'
 import Mock from '../../Mock'
 import { useState } from 'react'
-import Buttons from './components/buttons'
+import Buttons from '../components/buttons'
 
 interface BusinessSpecialtyProps {}
 const BusinessSpeciality: React.FC<BusinessSpecialtyProps> = () => {

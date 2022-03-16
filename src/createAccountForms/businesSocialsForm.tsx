@@ -9,8 +9,8 @@ import {
   FormLabel,
   Textarea,
 } from '@chakra-ui/react'
-import TextField from './components/textField'
-import Buttons from './components/buttons'
+import TextField from '../components/textField'
+import Buttons from '../components/buttons'
 import * as Yup from 'yup'
 import { Formik, useFormik, yupToFormErrors } from 'formik'
 const BusinesSocialsForm = () => {

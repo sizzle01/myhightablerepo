@@ -1,6 +1,6 @@
 import Buttons from '../components/buttons'
 import CreateAccount from '../components/createAccount'
-import UserDetailsForm from '../userDetailsForm'
+import UserDetailsForm from '../createAccountForms/userDetailsForm'
 
 const userdetails = () => {
   return (

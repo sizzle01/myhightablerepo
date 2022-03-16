@@ -1,5 +1,5 @@
-import Buttons from './components/buttons'
-import TextField from './components/textField'
+import Buttons from '../components/buttons'
+import TextField from '../components/textField'
 import { Box, FormLabel, Text } from '@chakra-ui/react'
 import { Formik, useFormik, yupToFormErrors } from 'formik'
 import * as Yup from 'yup'

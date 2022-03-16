@@ -1,17 +1,16 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import TextField from '../createAccountForms/components/textField'
+import { Box } from '@chakra-ui/react'
 import styles from '../../styles/Theme'
-import React, { useState } from 'react'
-import { Input } from '@chakra-ui/react'
+import NavBar from '../components/navBar'
 
-const Home: NextPage = () => {
+interface LandingPageProps {}
+const LandingPage: React.FC<LandingPageProps> = () => {
   return (
     <div>
-      <h1 fontSize="200px">Welcome</h1>
+      <Box>
+        <NavBar />
+      </Box>
     </div>
   )
 }
 
-export default Home
+export default LandingPage

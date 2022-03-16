@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react'
 import React from 'react'
-import CreateAccount from '../createAccountForms/components/createAccount'
+import CreateAccount from '../components/createAccount'
 import BusinesSocialsForm from '../createAccountForms/businesSocialsForm'
 import ProgressBar from '../createAccountForms/progressBar'
 

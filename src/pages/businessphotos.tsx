@@ -1,5 +1,5 @@
 import React from 'react'
-import CreateAccount from '../createAccountForms/components/createAccount'
+import CreateAccount from '../components/createAccount'
 import BusinessPhotos from '../createAccountForms/businessPhotos'
 import ProgressBar from '../createAccountForms/progressBar'
 

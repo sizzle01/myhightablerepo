@@ -1,5 +1,5 @@
 import React from 'react'
-import CreateAccount from '../createAccountForms/components/createAccount'
+import CreateAccount from '../components/createAccount'
 import ProgressBar from '../createAccountForms/progressBar'
 import SetupConfirmation from '../createAccountForms/setupConfirmation'
 
