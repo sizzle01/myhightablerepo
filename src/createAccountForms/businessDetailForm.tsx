@@ -1,5 +1,5 @@
-import Buttons from '../Buttons'
-import TextField from '../TextField'
+import Buttons from './components/buttons'
+import TextField from './components/textField'
 import { Box, FormLabel, Image, InputGroup, Text } from '@chakra-ui/react'
 import { Formik, useFormik, yupToFormErrors } from 'formik'
 import React, { useState } from 'react'
@@ -76,10 +76,11 @@ const BusinessDetailForm = () => {
             </FormLabel>
 
             <TextField
-              h="55px"
+              height="55px"
               type="email"
               name="email"
               id="email"
+              placeholder="Business Email "
               // children={
               //   formik.values.email.length < 1 && formik.errors.email ? null : (
               //     <CheckIcon color="white" bg="brand.100" borderRadius="50%" />
@@ -104,7 +105,8 @@ const BusinessDetailForm = () => {
               Business Name
             </FormLabel>
             <TextField
-              h="55px"
+              placeholder="Business Name"
+              height="55px"
               type="text"
               name="businessName"
               id="businessName"
@@ -140,7 +142,8 @@ const BusinessDetailForm = () => {
                 Your Password
               </FormLabel>
               <TextField
-                h="55px"
+                placeholder="Password"
+                height="55px"
                 type="password"
                 width="330px"
                 id="password"
@@ -166,10 +169,10 @@ const BusinessDetailForm = () => {
                 Confirm password
               </FormLabel>
               <TextField
-                h="55px"
+                placeholder="confirm password"
+                height="55px"
                 type="password"
                 width="330px"
-                height="55px"
                 name="confirmPassword"
                 id="confirmPassword"
                 value={formik.values.confirmPassword}
@@ -289,6 +292,7 @@ const BusinessDetailForm = () => {
             <Buttons
               type="submit"
               description="Proceed"
+              color="#ffffff"
               background="#FF9916"
               width="318px"
               height="65px"

@@ -1,8 +1,8 @@
 import { Box } from '@chakra-ui/react'
 import React from 'react'
-import CreateAccount from '../Components/createAccount'
-import BusinesSocialsForm from '../Components/createAccountForms/BusinesSocialsForm'
-import ProgressBar from '../Components/createAccountForms/ProgressBar'
+import CreateAccount from '../createAccountForms/components/createAccount'
+import BusinesSocialsForm from '../createAccountForms/businesSocialsForm'
+import ProgressBar from '../createAccountForms/progressBar'
 
 const businesssocials = () => {
   return (

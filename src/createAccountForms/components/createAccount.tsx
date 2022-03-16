@@ -1,18 +1,18 @@
 import { Box, color, Container, Image, Heading, Text } from '@chakra-ui/react'
-import { customTheme } from '../styles/Theme'
+// import customTheme from '../styles/Theme'
 import Logo from '../images/brandlogo.png'
-import Buttons from '../Components/Buttons'
-import TextField from '../Components/TextField'
-import ProgressBar from './createAccountForms/ProgressBar'
+import Buttons from './buttons'
+import TextField from './textField'
+import ProgressBar from '../progressBar'
 interface CreateAccountProps {
-  form: any
+  form?: any
   actionType: string
   actionDescription: string
-  enterDetails: string
-  basicDetails: string
-  loginButton: any
-  businessName: string
-  progressBar: any
+  enterDetails?: string
+  basicDetails?: string
+  loginButton?: any
+  businessName?: string
+  progressBar?: any
 }
 const CreateAccount: React.FC<CreateAccountProps> = ({
   form,

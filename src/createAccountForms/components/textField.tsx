@@ -14,16 +14,18 @@ import React, { useState } from 'react'
 interface TextFieldProps {
   height: string
   placeholder: string
-  label: string
+  label?: string
   id: string
   type: string
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-  children: any
-  h: string
+  checkIcon?: any
+  name: string
+  value: string
+  onBlur?: any
+  width?: string
 }
 
 const TextField: React.FC<TextFieldProps> = ({
-  label,
   id,
   children,
   name,
@@ -31,36 +33,39 @@ const TextField: React.FC<TextFieldProps> = ({
   value,
   placeholder,
   type,
-  h,
+  height,
+  width,
+  checkIcon,
 }) => {
   return (
     <div>
       <FormControl>
-        <FormLabel
+        {/* <FormLabel
           fontFamily="Montserrat"
           fontWeight="500"
           fontSize="14px"
           color="black.90"
         >
           {label}
-        </FormLabel>
+        </FormLabel> */}
         <InputGroup>
           <Input
             bg="fieldBg"
             id={id}
-            h={h}
+            height={height}
             placeholder={placeholder}
             focusBorderColor="brand.100"
             onChange={onChange}
             value={value}
             type={type}
+            width={width}
           />
-          <InputRightElement
-            // children={
-            //   <CheckIcon color="white" bg="brand.100" borderRadius="50%" />
-            // }
+          {/* <InputRightElement
+             checkIcon={
+               <CheckIcon color="white" bg="brand.100" borderRadius="50%" />
+            }
             children={children}
-          />
+          /> */}
         </InputGroup>
       </FormControl>
     </div>

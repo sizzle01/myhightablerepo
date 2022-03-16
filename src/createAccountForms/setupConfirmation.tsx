@@ -1,7 +1,7 @@
 import { Box, Image, Text } from '@chakra-ui/react'
 import React from 'react'
-import Buttons from '../Buttons'
-import ProgressBar from './ProgressBar'
+import Buttons from './components/buttons'
+import ProgressBar from './progressBar'
 import Mock from '../../Mock'
 
 const confirmationImage = './coffee.png'
@@ -10,7 +10,7 @@ const SetupConfirmation = () => {
   return (
     <div>
       <Box ml={['5%', '10%', '0%', '0%']}>
-        <ProgressBar businessName="Ichiraku Ramen Arigato" />
+        <ProgressBar businessName="Ichiraku Ramen Arigato" width="100%" />
       </Box>
       <Box
         display={{

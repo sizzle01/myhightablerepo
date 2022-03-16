@@ -5,14 +5,13 @@ interface ButtonsProps {
   color: string
   width: any
   background: string
-  borderRadius: string
   height: string
   fontSize: string
-  onClick: MouseEventHandler
-  type: string
-  leftIcon: React.ReactElement
-  colorScheme: string
-  border: string
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void
+  type: any
+  leftIcon?: React.ReactElement
+  colorScheme?: string
+  fontFamily?: string
 }
 const Buttons: React.FC<ButtonsProps> = ({
   description,
@@ -24,8 +23,8 @@ const Buttons: React.FC<ButtonsProps> = ({
   type,
   leftIcon,
   colorScheme,
-  border,
   color,
+  fontFamily,
 }) => {
   return (
     <Button
@@ -36,12 +35,12 @@ const Buttons: React.FC<ButtonsProps> = ({
         borderRadius: '10px',
         height,
         fontSize,
-        border,
       }}
       colorScheme={colorScheme}
       type={type}
       onClick={onClick}
       leftIcon={leftIcon}
+      fontFamily={fontFamily}
     >
       {description}
     </Button>

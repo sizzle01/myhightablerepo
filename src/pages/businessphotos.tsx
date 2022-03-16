@@ -1,7 +1,7 @@
 import React from 'react'
-import CreateAccount from '../Components/createAccount'
-import BusinessPhotos from '../Components/createAccountForms/BusinessPhotos'
-import ProgressBar from '../Components/createAccountForms/ProgressBar'
+import CreateAccount from '../createAccountForms/components/createAccount'
+import BusinessPhotos from '../createAccountForms/businessPhotos'
+import ProgressBar from '../createAccountForms/progressBar'
 
 const businessphotos = () => {
   return (

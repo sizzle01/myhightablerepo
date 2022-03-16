@@ -3,6 +3,7 @@ import React from 'react'
 
 interface ProgressBarProps {
   businessName: string
+  width: string
 }
 const ProgressBar: React.FC<ProgressBarProps> = ({ businessName, width }) => {
   return (

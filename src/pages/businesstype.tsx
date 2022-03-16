@@ -1,7 +1,7 @@
 import React from 'react'
-import CreateAccount from '../Components/createAccount'
-import BusinessInfo from '../Components/createAccountForms/BusinessInfo'
-import ProgressBar from '../Components/createAccountForms/ProgressBar'
+import CreateAccount from '../createAccountForms/components/createAccount'
+import BusinessInfo from '../createAccountForms/businessInfo'
+import ProgressBar from '../createAccountForms/progressBar'
 
 const Businesstype = () => {
   return (

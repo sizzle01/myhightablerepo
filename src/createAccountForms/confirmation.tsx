@@ -1,5 +1,5 @@
-import Buttons from '../Buttons'
-import TextField from '../TextField'
+import Buttons from './components/buttons'
+import TextField from './components/textField'
 import { Box, FormLabel, Text } from '@chakra-ui/react'
 import { Formik, useFormik, yupToFormErrors } from 'formik'
 import React, { useState } from 'react'
@@ -39,7 +39,6 @@ const Confirmation = () => {
             base: 'column',
           }}
           alignItems="center"
-          alignItems="center"
         >
           <Box width={['94%', '90%', '100%', '100%']}>
             <FormLabel
@@ -51,7 +50,7 @@ const Confirmation = () => {
               Enter the Special Code
             </FormLabel>
             <TextField
-              h="55px"
+              height="55px"
               type="text"
               id="confirmation"
               name="confirmation"
@@ -72,6 +71,7 @@ const Confirmation = () => {
 
           <Box mt="12%">
             <Buttons
+              color="#ffffff"
               type="submit"
               description="Proceed"
               background="#030303"

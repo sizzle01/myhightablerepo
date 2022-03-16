@@ -1,5 +1,5 @@
-import Buttons from '../Buttons'
-import TextField from '../TextField'
+import Buttons from './components/buttons'
+import TextField from './components/textField'
 import { Box, FormLabel, Text } from '@chakra-ui/react'
 import { Formik, useFormik, yupToFormErrors } from 'formik'
 import * as Yup from 'yup'
@@ -58,7 +58,7 @@ const UserDetailsForm = () => {
                 </FormLabel>
 
                 <TextField
-                  h="55px"
+                  height="55px"
                   placeholder="Enter email address"
                   id="email"
                   type="email"
@@ -143,6 +143,7 @@ const UserDetailsForm = () => {
             </Box>
             <Box mt={['66px', '80px', '100px', '124px']}>
               <Buttons
+                color="#ffffff"
                 type="submit"
                 description="Proceed"
                 background="#FF9916"

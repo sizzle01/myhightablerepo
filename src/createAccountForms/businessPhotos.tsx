@@ -1,35 +1,37 @@
 import { Box, Image, Input, Stack, Text } from '@chakra-ui/react'
-import ProgressBar from './ProgressBar'
+import ProgressBar from './progressBar'
 import { useState } from 'react'
-import Buttons from '../Buttons'
+import Buttons from './components/buttons'
 import React from 'react'
 
 const BusinessPhotos = () => {
-  const [selectedImages, setSelectedImages] = useState([])
-  const uploadedImage = React.useRef(null)
-  const imageUploader = React.useRef(null)
-  const onSelectFile = (event) => {
-    const selectedFiles = event.target.files
-    const selectedFilesArray = Array.from(selectedFiles)
+  //   const [selectedImages, setSelectedImages] = useState<number[]>([])
+  //   const uploadedImage = React.useRef(null)
+  //   const imageUploader = React.useRef(null)
+  //   const onSelectFile = (event: any) => {
+  //     const selectedFiles = event.target.files
+  //     const selectedFilesArray = Array.from(selectedFiles)
 
-    const imagesArray = selectedFilesArray.map((file) => {
-      return URL.createObjectURL(file)
-    })
+  //     const imagesArray = selectedFilesArray.map((file) => {
+  //       return URL.createObjectURL(file as Blob | MediaSource)
+  //     })
 
-    setSelectedImages((previousImages) => previousImages.concat(imagesArray))
-  }
-  const handleImageUpload = (e) => {
-    const [file] = e.target.files
-    if (file) {
-      const reader = new FileReader()
-      const { current } = uploadedImage
-      current.file = file
-      reader.onload = (e) => {
-        current.src = e.target.result
-      }
-      reader.readAsDataURL(file)
-    }
-  }
+  //     setSelectedImages((previousImages) =>
+  //       (previousImages as any[]).concat(imagesArray),
+  //     )
+  //   }
+  //   const handleImageUpload = (e: any) => {
+  //     const [file] = e.target.files
+  //     if (file) {
+  //       const reader = new FileReader()
+  //       const { current } = uploadedImage
+  //       current.file = file
+  //       reader.onload = (e) => {
+  //         current.src = e.target.result
+  //       }
+  //       reader.readAsDataURL(file)
+  //     }
+  //   }
 
   return (
     <div>
@@ -64,7 +66,7 @@ const BusinessPhotos = () => {
           >
             Business Logo
           </Text>
-          <Box
+          {/* <Box
             w="100px"
             h="100px"
             borderRadius="10px"
@@ -75,7 +77,7 @@ const BusinessPhotos = () => {
               <label>
                 <Box height="100px" borderRadius="10px" color="#ffffff">
                   <Image
-                    ref={uploadedImage}
+                    // ref={uploadedImage}
                     width="100%"
                     height="100%"
                     borderRadius="10px"
@@ -83,8 +85,8 @@ const BusinessPhotos = () => {
                 </Box>
                 <Box display="none">
                   <input
-                    onChange={handleImageUpload}
-                    ref={imageUploader}
+                    // onChange={handleImageUpload}
+                    // ref={imageUploader}
                     type="file"
                     name="images"
                     multiple={false}
@@ -94,7 +96,7 @@ const BusinessPhotos = () => {
               </label>
             </Box>
             {/* <Image src="./coffee.png" w="100%" h="100%" /> */}
-            <Box
+          {/* <Box
               h="29px"
               w="29px"
               bg="#0055FF"
@@ -150,9 +152,9 @@ const BusinessPhotos = () => {
                             w="100%"
                             borderRadius="10px"
                           />
-                        </Box>
+                        </Box> */}
 
-                        {/* <button
+          {/* <button
                         onClick={() =>
                           setSelectedImages(
                             selectedImages.filter((e) => e !== image),
@@ -161,8 +163,8 @@ const BusinessPhotos = () => {
                       >
                         delete image
                       </button> */}
-                        {/* <p>{index + 1}</p> */}
-                      </Box>
+          {/* <p>{index + 1}</p> */}
+          {/* </Box>
                     )
                   })}
               </Box>
@@ -207,7 +209,7 @@ const BusinessPhotos = () => {
                 fontSize="14px"
               />
             </Box>
-          </Box>
+          </Box> */}
         </Box>
       </Box>
     </div>

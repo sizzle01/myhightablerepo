@@ -1,25 +1,25 @@
 import { Box, Grid, Image, Text } from '@chakra-ui/react'
 import React from 'react'
-import ProgressBar from './ProgressBar'
+import ProgressBar from './progressBar'
 import Mock from '../../Mock'
 import { useState } from 'react'
-import Buttons from '../Buttons'
+import Buttons from './components/buttons'
 
-interface BusinessSpeciality {}
-const BusinessSpeciality: React.FC<BusinessSpecialityProps> = () => {
-  const [specialty, setSpecialty] = useState({})
+interface BusinessSpecialtyProps {}
+const BusinessSpeciality: React.FC<BusinessSpecialtyProps> = () => {
+  // const [specialty, setSpecialty] = useState({})
   const [preferences, setPreferences] = useState({})
 
-  const handleSpecialty = (index) => () => {
-    setSpecialty((state) => ({
-      [index]: !state[index],
-    }))
-  }
-  const handlePreferences = (index) => () => {
-    setPreferences((state) => ({
-      [index]: !state[index],
-    }))
-  }
+  // const handleSpecialty = (index) => () => {
+  //   setSpecialty((state) => ({
+  //     [index]: !state[index],
+  //   }))
+  // }
+  // const handlePreferences = (index) => () => {
+  //   setPreferences((state) => ({
+  //     [index]: !state[index],
+  //   }))
+  // }
   return (
     <div>
       <Box>
@@ -64,7 +64,8 @@ const BusinessSpeciality: React.FC<BusinessSpecialityProps> = () => {
           >
             {Mock.specialty.map((special, index) => {
               return (
-                <Box mt="10px" key={index} onClick={handleSpecialty(index)}>
+                // onClick={handleSpecialty(index)}
+                <Box mt="10px" key={index}>
                   <Box
                     role="group"
                     as="button"
@@ -95,7 +96,7 @@ const BusinessSpeciality: React.FC<BusinessSpecialityProps> = () => {
                       justifyContent="center"
                       position="relative"
                     >
-                      {specialty[index] ? (
+                      {/* {specialty[index] ? (
                         <Image
                           src="./check.png"
                           bg="#FF9916"
@@ -105,10 +106,11 @@ const BusinessSpeciality: React.FC<BusinessSpecialityProps> = () => {
                           left="94%"
                           bottom={['170%', '170%', '170%', '130%']}
                         />
-                      ) : null}
+                      ) : null} */}
 
                       <Image
-                        src={special.icon}
+                        // src={special.icon}
+                        alt="icon"
                         bg="#E8E8E8"
                         mr="10px"
                         p="5px"
@@ -154,7 +156,8 @@ const BusinessSpeciality: React.FC<BusinessSpecialityProps> = () => {
             >
               {Mock.preferences.map((preference, index) => {
                 return (
-                  <Box mt="10px" key={index} onClick={handlePreferences(index)}>
+                  // onClick={handlePreferences(index)}
+                  <Box mt="10px" key={index}>
                     <Box
                       role="group"
                       as="button"
@@ -185,7 +188,7 @@ const BusinessSpeciality: React.FC<BusinessSpecialityProps> = () => {
                         justifyContent="center"
                         position="relative"
                       >
-                        {preferences[index] ? (
+                        {/* {preferences[index] ? (
                           <Image
                             src="./check.png"
                             bg="#FF9916"
@@ -195,7 +198,7 @@ const BusinessSpeciality: React.FC<BusinessSpecialityProps> = () => {
                             left="92%"
                             bottom={['170%', '170%', '170%', '120%']}
                           />
-                        ) : null}
+                        ) : null} */}
                         <Text>{preference.name}</Text>
                       </Box>
                     </Box>

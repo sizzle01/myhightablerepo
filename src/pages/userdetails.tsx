@@ -1,6 +1,6 @@
-import Buttons from '../Components/Buttons'
-import CreateAccount from '../Components/createAccount'
-import UserDetailsForm from '../Components/createAccountForms/userDetailsForm'
+import Buttons from '../components/buttons'
+import CreateAccount from '../components/createAccount'
+import UserDetailsForm from '../userDetailsForm'
 
 const userdetails = () => {
   return (
@@ -12,6 +12,7 @@ const userdetails = () => {
         basicDetails="Some basic details to get started."
         loginButton={
           <Buttons
+            type="submit"
             description="Go to Login"
             background="#666670"
             width="100%"

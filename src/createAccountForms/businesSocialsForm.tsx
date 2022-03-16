@@ -9,8 +9,8 @@ import {
   FormLabel,
   Textarea,
 } from '@chakra-ui/react'
-import TextField from '../TextField'
-import Buttons from '../Buttons'
+import TextField from './components/textField'
+import Buttons from './components/buttons'
 import * as Yup from 'yup'
 import { Formik, useFormik, yupToFormErrors } from 'formik'
 const BusinesSocialsForm = () => {
@@ -107,7 +107,8 @@ const BusinesSocialsForm = () => {
                 Business Address
               </FormLabel>
               <TextField
-                h="55px"
+                placeholder="Business address"
+                height="55px"
                 type="text"
                 id="address"
                 name="address"
@@ -137,7 +138,6 @@ const BusinesSocialsForm = () => {
               <Box
                 w={['100%', '100%', '100%', '47%']}
                 mb={['30px', '30px', '30px', '30px']}
-                w={['100%', '100%', '100%', '47%']}
               >
                 <FormLabel
                   fontFamily="Montserrat"
@@ -152,7 +152,7 @@ const BusinesSocialsForm = () => {
                   type="number"
                   id="phone"
                   name="phone"
-                  h="55px"
+                  height="55px"
                   onChange={formik.handleChange}
                   value={formik.values.phone}
                   onBlur={formik.handleBlur}
@@ -164,7 +164,6 @@ const BusinesSocialsForm = () => {
               <Box
                 w={['100%', '100%', '100%', '47%']}
                 mb={['30px', '30px', '30px', '30px']}
-                w={['100%', '100%', '100%', '47%']}
               >
                 <FormLabel
                   fontFamily="Montserrat"
@@ -175,12 +174,11 @@ const BusinesSocialsForm = () => {
                   Business website
                 </FormLabel>
                 <TextField
-                  h="55px"
+                  height="55px"
                   placeholder="website"
                   type="text"
                   id="website"
                   name="website"
-                  h="55px"
                   onChange={formik.handleChange}
                   value={formik.values.website}
                   onBlur={formik.handleBlur}
@@ -208,7 +206,6 @@ const BusinesSocialsForm = () => {
               <Box
                 w={['100%', '100%', '100%', '47%']}
                 mb={['30px', '30px', '30px', '30px']}
-                w={['100%', '100%', '100%', '47%']}
               >
                 <FormLabel
                   fontFamily="Montserrat"
@@ -223,7 +220,7 @@ const BusinesSocialsForm = () => {
                   type="text"
                   id="twitter"
                   name="twitter"
-                  h="55px"
+                  height="55px"
                   onChange={formik.handleChange}
                   value={formik.values.twitter}
                   onBlur={formik.handleBlur}
@@ -235,7 +232,6 @@ const BusinesSocialsForm = () => {
               <Box
                 w={['100%', '100%', '100%', '47%']}
                 mb={['30px', '30px', '30px', '30px']}
-                w={['100%', '100%', '100%', '47%']}
               >
                 <FormLabel
                   fontFamily="Montserrat"
@@ -246,12 +242,11 @@ const BusinesSocialsForm = () => {
                   Facebook
                 </FormLabel>
                 <TextField
-                  h="55px"
+                  height="55px"
                   placeholder="facebook.com/"
                   type="text"
                   id="facebook"
                   name="facebook"
-                  h="55px"
                   onChange={formik.handleChange}
                   value={formik.values.facebook}
                   onBlur={formik.handleBlur}
@@ -279,7 +274,6 @@ const BusinesSocialsForm = () => {
               <Box
                 w={['100%', '100%', '100%', '47%']}
                 mb={['30px', '30px', '30px', '30px']}
-                w={['100%', '100%', '100%', '47%']}
               >
                 <FormLabel
                   fontFamily="Montserrat"
@@ -294,7 +288,7 @@ const BusinesSocialsForm = () => {
                   type="text"
                   id="instagram"
                   name="instagram"
-                  h="55px"
+                  height="55px"
                   onChange={formik.handleChange}
                   value={formik.values.instagram}
                   onBlur={formik.handleBlur}
@@ -306,7 +300,6 @@ const BusinesSocialsForm = () => {
               <Box
                 w={['100%', '100%', '100%', '47%']}
                 mb={['30px', '30px', '30px', '30px']}
-                w={['100%', '100%', '100%', '47%']}
               >
                 <FormLabel
                   fontFamily="Montserrat"
@@ -317,12 +310,11 @@ const BusinesSocialsForm = () => {
                   LinkedIn
                 </FormLabel>
                 <TextField
-                  h="55px"
+                  height="55px"
                   placeholder="facebook.com/"
                   type="text"
                   id="linkedin"
                   name="linkedin"
-                  h="55px"
                   onChange={formik.handleChange}
                   value={formik.values.linkedin}
                   onBlur={formik.handleBlur}
@@ -345,7 +337,6 @@ const BusinesSocialsForm = () => {
               </FormLabel>
               <Textarea
                 rows={7}
-                type="text"
                 id="description"
                 name="description"
                 focusBorderColor="brand.100"
@@ -363,6 +354,7 @@ const BusinesSocialsForm = () => {
 
             <Box mt="4%">
               <Buttons
+                color="#ffffff"
                 type="submit"
                 description="Proceed"
                 background="#FF9916"

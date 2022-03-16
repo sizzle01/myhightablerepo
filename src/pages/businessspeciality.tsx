@@ -1,6 +1,6 @@
 import React from 'react'
-import CreateAccount from '../Components/createAccount'
-import BusinessSpeciality from '../Components/createAccountForms/BusinessSpeciality'
+import CreateAccount from '../createAccountForms/components/createAccount'
+import BusinessSpeciality from '../createAccountForms/businessSpeciality'
 
 const businessspeciality = () => {
   return (
@@ -8,7 +8,7 @@ const businessspeciality = () => {
       <CreateAccount
         actionType="Create account"
         actionDescription="Create your account in a few simple steps and start enjoying uninterrupted enterprise bookings and services management."
-        form={<BusinessSpeciality name="Ichiraku Ramen Arigato" />}
+        form={<BusinessSpeciality />}
       />
     </div>
   )

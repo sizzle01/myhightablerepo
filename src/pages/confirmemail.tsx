@@ -1,6 +1,6 @@
-import Buttons from '../Components/Buttons'
-import CreateAccount from '../Components/createAccount'
-import Confirmation from '../Components/createAccountForms/Confirmation'
+import Buttons from '../createAccountForms/components/buttons'
+import CreateAccount from '../createAccountForms/components/createAccount'
+import Confirmation from '../createAccountForms/confirmation'
 
 const ConfirmEmail = () => {
   return (
@@ -12,6 +12,7 @@ const ConfirmEmail = () => {
         basicDetails="Please enter the code that was sent to your email or use the magic link in the email to confirm that it’s your email."
         loginButton={
           <Buttons
+            type="button"
             description="Go to Login"
             background="#666670"
             width="100%"

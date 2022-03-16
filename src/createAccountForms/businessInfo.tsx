@@ -1,18 +1,18 @@
 import { Box, Grid, Image, Text } from '@chakra-ui/react'
 import { useState } from 'react'
-import Buttons from '../Buttons'
+import Buttons from './components/buttons'
 import Pic from '../../images/cook.png'
 import Mock from '../../Mock'
-import ProgressBar from './ProgressBar'
+import ProgressBar from './progressBar'
 
 const BusinessInfo = () => {
   const [clickedIndex, setClickedIndex] = useState({})
 
-  const handleClick = (index) => () => {
+  const handleClick = (index: any) => () => {
     setClickedIndex((state) => ({
-      [index]: !state[index],
+      // [index]: !state[index],
+      [index as any]: !state,
     }))
-    console.log('value:', value.currentTarget.name)
   }
   return (
     <div>
@@ -34,7 +34,7 @@ const BusinessInfo = () => {
             xl: 'block',
             base: 'flex',
           }}
-          alignItems="center"
+          // alignItems="center"
           alignItems={{
             sm: 'center',
             base: 'center',
@@ -105,9 +105,12 @@ const BusinessInfo = () => {
                       ml="20px"
                       position="relative"
                     >
-                      {clickedIndex[index] ? (
+                      {/* clickedIndex[index] */}
+                      {clickedIndex ? (
                         <Image
-                          src="./check.png"
+                          src="./chec
+                          k.png"
+                          alt="check"
                           bg="#FF9916"
                           h={['15px', '16px', '19px', '19px']}
                           borderRadius="50%"
@@ -119,6 +122,7 @@ const BusinessInfo = () => {
 
                       <Image
                         src={type.icon}
+                        alt="icon"
                         bg="#E8E8E8"
                         mr="10px"
                         p="5px"
@@ -138,6 +142,7 @@ const BusinessInfo = () => {
 
           <Box mt="67px" mx="auto">
             <Buttons
+              type="submit"
               color="#ffffff"
               width="180px"
               height="65px"
