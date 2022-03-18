@@ -1,6 +1,6 @@
 import { Box, Grid, Image, Text } from '@chakra-ui/react'
 import { useState } from 'react'
-import Buttons from './components/buttons'
+import Buttons from '../components/buttons'
 import Pic from '../../images/cook.png'
 import Mock from '../../Mock'
 import ProgressBar from './progressBar'
@@ -9,10 +9,10 @@ const BusinessInfo = () => {
   const [clickedIndex, setClickedIndex] = useState({})
 
   const handleClick = (index: any) => () => {
-    setClickedIndex((state) => ({
-      // [index]: !state[index],
-      [index as any]: !state,
-    }))
+    // setClickedIndex((state) => ({
+    //   // [index]: !state[index],
+    //   [index as string]: !state[index],
+    // }))
   }
   return (
     <div>
@@ -75,7 +75,7 @@ const BusinessInfo = () => {
               return (
                 <Box mt="10px" key={index} onClick={handleClick(index)}>
                   <Box
-                    value={type.value}
+                    value={type.data}
                     role="group"
                     as="button"
                     h={['55px', '65px', '70px', '80px']}
@@ -105,11 +105,9 @@ const BusinessInfo = () => {
                       ml="20px"
                       position="relative"
                     >
-                      {/* clickedIndex[index] */}
-                      {clickedIndex ? (
+                      {/* {clickedIndex[index] ? (
                         <Image
-                          src="./chec
-                          k.png"
+                          src="./check.png"
                           alt="check"
                           bg="#FF9916"
                           h={['15px', '16px', '19px', '19px']}
@@ -118,7 +116,7 @@ const BusinessInfo = () => {
                           left="93%"
                           bottom={['110%', '0%', '0%', '131%']}
                         />
-                      ) : null}
+                      ) : null} */}
 
                       <Image
                         src={type.icon}
@@ -159,8 +157,3 @@ const BusinessInfo = () => {
 }
 
 export default BusinessInfo
-{
-  /* <Box>
-
-</Box> */
-}

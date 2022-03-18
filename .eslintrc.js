@@ -20,22 +20,22 @@ module.exports = {
 		"react",
 		"@typescript-eslint"
 	],
-	"rules": {
-		"indent": [
-			"error",
-			"tab"
-		],
+	// "rules": {
+	// 	"indent": [
+	// 		"error",
+	// 		"tab"
+	// 	],
 		"linebreak-style": [
 			"error",
 			"windows"
 		],
-		"quotes": [
-			"error",
-			"double"
-		],
-		"semi": [
-			"error",
-			"always"
-		]
+		// "quotes": [
+		// 	"error",
+		// 	"double"
+		// ],
+		// "semi": [
+		// 	"error",
+		// 	"always"
+		// ]
 	}
 };

@@ -5,13 +5,16 @@ interface NavBarProps {}
 
 const menuLinks = [
   {
-    link: 'Menu Link',
+    link: 'Home',
   },
   {
-    link: 'Menu Link',
+    link: 'Hightable Consumer',
   },
   {
-    link: 'Menu Link',
+    link: 'Blog',
+  },
+  {
+    link: 'HT Routes',
   },
 ]
 const NavBar: React.FC<NavBarProps> = () => {
@@ -35,7 +38,6 @@ const NavBar: React.FC<NavBarProps> = () => {
                   key={index}
                   as="button"
                   mr="37px"
-                  variant="link"
                   color="rgba(40, 40, 40, 0.63)"
                   fontFamily="montserrat"
                   fontSize="16px"

@@ -3,23 +3,27 @@ export default {
     {
       icon: '/cook.png',
       name: 'Restaurant',
-      value:'works'
+      data:'works'
     },
     {
         icon: '/hotel.png',
-        name: 'Hotel'
+        name: 'Hotel',
+        data:'enter'
       },
       {
         icon: '/agency.png',
-        name: 'Travel Agency'
+        name: 'Travel Agency',
+        data:'exit'
       },
       {
         icon: '/event.png',
-        name: 'Event organizer'
+        name: 'Event organizer',
+        data:'winner'
       },
       {
         icon: '/cook.png',
-        name: 'Restaurant'
+        name: 'Restaurant',
+        data:'improve'
       },
   ],
 

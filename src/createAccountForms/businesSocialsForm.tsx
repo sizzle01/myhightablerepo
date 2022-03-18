@@ -13,7 +13,15 @@ import TextField from '../components/textField'
 import Buttons from '../components/buttons'
 import * as Yup from 'yup'
 import { Formik, useFormik, yupToFormErrors } from 'formik'
+
 const BusinesSocialsForm = () => {
+  const urlValidator = Yup.string()
+    .matches(
+      /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
+      'Enter correct url!',
+    )
+    .required('Please enter website')
+
   const formik = useFormik({
     initialValues: {
       address: '',
@@ -25,6 +33,7 @@ const BusinesSocialsForm = () => {
       linkedin: '',
       description: '',
     },
+
     validationSchema: Yup.object({
       address: Yup.string()
         .min(7, 'must be 7 characters or more')
@@ -34,46 +43,19 @@ const BusinesSocialsForm = () => {
         .min(11, 'must be at least 11 characters')
         .required('Required'),
 
-      website: Yup.string()
-        .matches(
-          /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
-          'Enter correct url!',
-        )
-        .required('Please enter website'),
-      twitter: Yup.string()
-        .matches(
-          /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
-          'Enter correct url!',
-        )
-        .required('Please enter website'),
-      facebook: Yup.string()
-        .matches(
-          /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
-          'Enter correct url!',
-        )
-        .required('Please enter website'),
-      instagram: Yup.string()
-        .matches(
-          /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
-          'Enter correct url!',
-        )
-        .required('Please enter website'),
-      linkedin: Yup.string()
-        .matches(
-          /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
-          'Enter correct url!',
-        )
-        .required('Please enter website'),
+      website: urlValidator,
+      twitter: urlValidator,
+      facebook: urlValidator,
+      instagram: urlValidator,
+      linkedin: urlValidator,
       description: Yup.string()
         .min(5, 'must be greater than 5 characters')
         .required('Required'),
     }),
 
-    onSubmit: (values) => {
-      console.log(formik.values)
-    },
+    onSubmit: (values) => {},
   })
-  console.log(formik.initialValues)
+
   return (
     <div>
       <form onSubmit={formik.handleSubmit}>
