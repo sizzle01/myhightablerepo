@@ -6,14 +6,15 @@ import Mock from '../../Mock'
 import ProgressBar from './progressBar'
 
 const BusinessInfo = () => {
-  const [clickedIndex, setClickedIndex] = useState({})
+  const [clickedIndex, setClickedIndex] = useState<any>({})
 
   const handleClick = (index: any) => () => {
-    // setClickedIndex((state) => ({
-    //   // [index]: !state[index],
-    //   [index as string]: !state[index],
-    // }))
+    setClickedIndex((state: any) => ({
+      // [index]: !state[index],
+      [index as any]: !state[index],
+    }))
   }
+
   return (
     <div>
       <Box width="100%">
@@ -67,7 +68,7 @@ const BusinessInfo = () => {
               base: 'row',
             }}
             flexWrap="wrap"
-            gap="5"
+            gap="3"
             ml={['4%', '10%', '0%', '0%']}
             mt="42px"
           >
@@ -105,7 +106,7 @@ const BusinessInfo = () => {
                       ml="20px"
                       position="relative"
                     >
-                      {/* {clickedIndex[index] ? (
+                      {clickedIndex[index] ? (
                         <Image
                           src="./check.png"
                           alt="check"
@@ -116,7 +117,7 @@ const BusinessInfo = () => {
                           left="93%"
                           bottom={['110%', '0%', '0%', '131%']}
                         />
-                      ) : null} */}
+                      ) : null}
 
                       <Image
                         src={type.icon}
